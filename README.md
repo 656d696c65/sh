@@ -5,13 +5,7 @@ Automatically setup a debian like VPS.
 - [traefik](https://github.com/traefik/traefik)
 - [docker](https://github.com/docker)
 
-# Commands
-as *root*
+# Command
 ```console
 sh <(wget -qLO - https://raw.githubusercontent.com/emilesabatier/sh/master/bin/root.setup.sh)
-```
-
-as *toor*
-```console
-sh /root/.sh/bin/toor.setup.sh
 ```
