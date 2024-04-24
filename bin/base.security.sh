@@ -24,6 +24,3 @@ iptables -A INPUT -p tcp --dport 443 -j ACCEPT
 apt install fail2ban
 cp -v /root/.sh/etc/fail2ban/jail.local /etc/fail2ban/jail.local
 systemctl restart fail2ban
-
-# Switch user
-su - 656d696c65
