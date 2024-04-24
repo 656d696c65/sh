@@ -9,8 +9,10 @@ apt -y install git
 git clone --depth 1 https://github.com/emilesabatier/sh /root/.sh
 
 # Start scripts
-bash /root/.sh/bin/root.security.sh
-bash /root/.sh/bin/root.docker.sh
+sh /root/.sh/bin/root.security.sh
+sh /root/.sh/bin/root.docker.sh
 
-# Switch user
-sudo su - toor
+# Execute as toor user
+sudo su -l toor -c `
+    sh /root/.sh/bin/toor.setup.sh
+`

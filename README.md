@@ -8,10 +8,10 @@ Automatically setup a debian like VPS.
 # Commands
 as *root*
 ```console
-bash <(wget -qLO - https://raw.githubusercontent.com/emilesabatier/sh/master/bin/root.setup.sh)
+sh <(wget -qLO - https://raw.githubusercontent.com/emilesabatier/sh/master/bin/root.setup.sh)
 ```
 
 as *toor*
 ```console
-bash <(wget -qLO - https://raw.githubusercontent.com/emilesabatier/sh/master/bin/toor.setup.sh)
+sh /root/.sh/bin/toor.setup.sh
 ```
