@@ -1,7 +1,7 @@
 #!/bin/sh
 
 printf "\n"
-printf "\e[1;31m[Traefik]\e[0m"
+echo "\e[1;31m[Traefik]\e[0m"
 
 
 # Add traefik compose file

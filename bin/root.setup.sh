@@ -28,4 +28,8 @@ sudo su -l toor -c `
     sh /home/toor/.sh/bin/toor.traefik.sh
 `
 
+# Remove repo
 rm -r /home/toor/.sh
+
+# Switch user
+sudo su - toor
