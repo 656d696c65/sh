@@ -10,7 +10,7 @@ printf "\tSet up new user"
 adduser 656d696c65
 apt install sudo
 usermod -aG root,sudo,adm 656d696c65
-cp -f ../etc/ssh/sshd_config /etc/ssh/sshd_config
+cp -f ~/.sh/etc/ssh/sshd_config /etc/ssh/sshd_config
 systemctl restart sshd
 
 printf "\tSet up iptables"
@@ -21,5 +21,5 @@ iptables -A INPUT -p tcp --dport 443 -j ACCEPT
 
 printf "\tSet up fail2ban"
 apt install fail2ban
-cp ../etc/fail2ban/jail.local /etc/fail2ban/jail.local
+cp ~/.sh/etc/fail2ban/jail.local /etc/fail2ban/jail.local
 systemctl restart fail2ban
