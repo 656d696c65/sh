@@ -1,8 +1,8 @@
 #!/bin/sh
 
-printf "\n[Docker]"
+printf "\n" "[Docker]"
 
-printf "\tSet up Docker's apt repository"
+printf "\t" "Set up Docker's apt repository"
 apt update
 apt install ca-certificates curl
 install -m 0755 -d /etc/apt/keyrings
@@ -15,13 +15,13 @@ echo \
   tee /etc/apt/sources.list.d/docker.list > /dev/null
 apt update
 
-printf "\tInstall the Docker packages"
+printf "\t" "Install the Docker packages"
 apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
-printf "\tAdd Docker rights"
+printf "\t" "Add Docker rights"
 groupadd docker
 usermod -aG docker 656d696c65
 
-printf "\tAdd Docker networks"
+printf "\t" "Add Docker networks"
 docker network create web
 docker network create internal

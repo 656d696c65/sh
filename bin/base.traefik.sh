@@ -1,6 +1,6 @@
 #!/bin/sh
 
-printf "\n[Traefik]"
+printf "\n" "[Traefik]"
 
 mkdir ~/traefik
 cp ~/.sh/home/traefik/docker-compose.yml ~/traefik/docker-compose.yml
