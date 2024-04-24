@@ -6,12 +6,12 @@ Automatically setup a debian like VPS.
 - [docker](https://github.com/docker)
 
 # Commands
-root
+as *root*
 ```console
 bash <(wget -qLO - https://raw.githubusercontent.com/emilesabatier/sh/master/bin/root.setup.sh)
 ```
 
-toor
+as *toor*
 ```console
 bash <(wget -qLO - https://raw.githubusercontent.com/emilesabatier/sh/master/bin/toor.setup.sh)
 ```
