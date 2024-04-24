@@ -6,7 +6,7 @@ apt update
 apt upgrade
 
 # Set up new user
-adduser --force-badname toor
+adduser -m --force-badname toor
 apt -y install sudo
 usermod -aG root,sudo,adm toor
 cp -fv /home/toor/.sh/etc/ssh/sshd_config /etc/ssh/sshd_config
