@@ -8,6 +8,4 @@ git clone --depth 1 https://github.com/emilesabatier/sh /root/.sh
 sh /root/.sh/bin/root.security.sh
 sh /root/.sh/bin/root.docker.sh
 
-sudo su -l toor -c `
-    sh /root/.sh/bin/toor.setup.sh
-`
+sudo su - toor
