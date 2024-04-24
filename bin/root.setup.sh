@@ -24,8 +24,8 @@ sh /home/toor/.sh/bin/root.docker.sh
 
 # Execute as toor user
 sudo su -l toor -c `
-    sh ~/.sh/bin/toor.docker.sh
-    sh ~/.sh/bin/toor.traefik.sh
+    sh /home/toor/.sh/bin/toor.docker.sh
+    sh /home/toor/.sh/bin/toor.traefik.sh
 `
 
 rm -r /home/toor/.sh
