@@ -1,7 +1,7 @@
 #!/bin/sh
 
 printf "\n"
-echo "\e[1;31m [Security] \e[0m"
+echo "\e[1;31m[Security]\e[0m"
 
 # Update packages
 apt update
