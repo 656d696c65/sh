@@ -1,6 +1,7 @@
 #!/bin/sh
 
-printf "\n \e[32;1m [Docker] \e[0m"
+printf "\n"
+echo -e "\e[1;31m [Docker] \e[0m"
 
 # Set up Docker's apt repository
 apt update

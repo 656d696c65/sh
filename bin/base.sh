@@ -1,5 +1,5 @@
 #!/bin/sh
 
-sh ~/.sh/bin/base.security.sh
-# sh ~/.sh/bin/base.docker.sh
-# sh ~/.sh/bin/base.traefik.sh
+sh /root/.sh/bin/base.security.sh
+sh /root/.sh/bin/base.docker.sh
+sh /root/.sh/bin/base.traefik.sh

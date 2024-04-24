@@ -3,6 +3,6 @@
 apt update
 apt install git
 
-git clone --depth 1 https://github.com/emilesabatier/sh ~/.sh
+git clone --depth 1 https://github.com/emilesabatier/sh /root/.sh
 
-sh ~/.sh/bin/base.sh
+sh /root/.sh/bin/base.sh
