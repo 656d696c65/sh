@@ -1,0 +1,14 @@
+[DEFAULT]
+bantime  = 10m
+maxretry = 5
+enabled = false
+destemail = dev@emilesabatier.com
+sendername = Fail2ban
+
+[sshd]
+enabled = true
+port = ssh
+filter = sshd
+maxretry = 3
+findtime = 5m
+bantime  = 10m
