@@ -23,11 +23,7 @@ sh /home/toor/.sh/bin/root.security.sh
 sh /home/toor/.sh/bin/root.docker.sh
 
 # Execute as toor user
-sudo su -l toor -c `
-    sh /home/toor/.sh/bin/toor.docker.sh
-    sh /home/toor/.sh/bin/toor.traefik.sh
-    sh /home/toor/.sh/bin/toor.plausible.sh
-`
+sudo su -l toor -c `sh /home/toor/.sh/bin/toor.setup.sh`
 
 # Remove repo
 rm -r /home/toor/.sh
