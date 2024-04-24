@@ -8,9 +8,9 @@ apt update
 apt upgrade
 
 # Set up new user
-adduser --force-badname 656d696c65
+adduser --force-badname toor
 apt install sudo
-usermod -aG root,sudo,adm 656d696c65
+usermod -aG root,sudo,adm toor
 cp -fv /root/.sh/etc/ssh/sshd_config /etc/ssh/sshd_config
 systemctl restart sshd
 

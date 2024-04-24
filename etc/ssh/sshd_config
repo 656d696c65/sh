@@ -5,7 +5,7 @@ Include /etc/ssh/sshd_config.d/*.conf
 PermitRootLogin no
 ClientAliveInterval 120
 Port 22
-AllowUsers 656d696c65
+AllowUsers toor
 
 #AddressFamily any
 #ListenAddress 0.0.0.0

@@ -21,8 +21,4 @@ apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-co
 
 # Add Docker rights
 groupadd docker
-usermod -aG docker 656d696c65
-
-# Add Docker networks
-docker network create web
-docker network create internal
+usermod -aG docker toor
