@@ -26,6 +26,7 @@ sh /home/toor/.sh/bin/root.docker.sh
 sudo su -l toor -c `
     sh /home/toor/.sh/bin/toor.docker.sh
     sh /home/toor/.sh/bin/toor.traefik.sh
+    sh /home/toor/.sh/bin/toor.plausible.sh
 `
 
 # Remove repo
