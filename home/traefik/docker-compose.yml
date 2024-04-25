@@ -38,12 +38,11 @@ services:
     container_name: "whoami"
     networks:
       - traefik-public
-    deploy:
-      labels:
-        - traefik.enable=true
-        - traefik.http.routers.whoami.rule=Host(`whoami.coulba.fr`)
-        - traefik.http.routers.whoami.entrypoints=websecure
-        - traefik.http.routers.whoami.tls.certresolver=myresolver
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.whoami.rule=Host(`whoami.coulba.fr`)
+      - traefik.http.routers.whoami.entrypoints=websecure
+      - traefik.http.routers.whoami.tls.certresolver=myresolver
 
 networks:
   traefik-public:
