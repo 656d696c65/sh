@@ -4,6 +4,8 @@ services:
     image: "traefik:v2.11"
     container_name: "traefik"
     command:
+      - --api.insecure=true
+      - --api.dashboard=true
       - --providers.docker.watch=true
       - --providers.docker.exposedbydefault=false
       - --providers.docker.swarmmode=true
