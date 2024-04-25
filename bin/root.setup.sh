@@ -25,8 +25,8 @@ sh /home/toor/.sh/bin/root.docker.sh
 # Execute as toor user
 sudo su -l toor -c `sh /home/toor/.sh/bin/toor.setup.sh`
 
-# Remove repo
-rm -r /home/toor/.sh
+# # Remove repo
+# rm -r /home/toor/.sh
 
 # Switch user
 sudo su - toor

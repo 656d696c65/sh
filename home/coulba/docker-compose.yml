@@ -1,0 +1,16 @@
+services:
+
+  website:
+    image: "ghcr.io/emilesabatier/coulba/website"
+    networks:
+      - public
+    deploy:
+      labels:
+        - traefik.enable=true
+        - traefik.http.routers.website.rule=Host(`coulba.fr`)
+        - traefik.http.routers.website.entrypoints=websecure
+        - traefik.http.services.myservice.loadbalancer.server.port=8080
+
+networks:
+  public:
+    external: true
