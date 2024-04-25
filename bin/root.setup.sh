@@ -9,14 +9,16 @@ apt upgrade
 adduser toor
 apt -y install sudo
 usermod -aG root,sudo,adm toor
-cp -fv /home/toor/.sh/etc/ssh/sshd_config /etc/ssh/sshd_config
-systemctl restart sshd
 
 # Install git
 apt -y install git
 
 # Pull repo
 git clone --depth 1 https://github.com/emilesabatier/sh /home/toor/.sh
+
+# Update ssh config
+cp -fv /home/toor/.sh/etc/ssh/sshd_config /etc/ssh/sshd_config
+systemctl restart sshd
 
 # Start scripts
 sh /home/toor/.sh/bin/root.security.sh

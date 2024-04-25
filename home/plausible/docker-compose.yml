@@ -42,10 +42,9 @@ services:
       - plausible-conf.env
     networks:
       - internal
-      - public
+      - traefik-public
     labels:
       - "traefik.enable=true"
-      - "traefik.docker.network=public"
       - "traefik.http.routers.plausible.rule=Host(`plausible.coulba.fr`)"
       - "traefik.http.routers.plausible.entrypoints=websecure"
       - "traefik.http.routers.plausible.tls.certresolver=myresolver"
@@ -62,5 +61,5 @@ volumes:
 
 networks:
   internal:
-  public:
+  traefik-public:
     external: true

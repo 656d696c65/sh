@@ -1,7 +1,7 @@
 #!/bin/sh
 
 printf "\n"
-echo "\e[1;31m[Coulba]\e[0m"
+echo $"\e[1;31m[Coulba]\e[0m"
 
 
 # Add coulba compose file

@@ -1,12 +1,12 @@
 #!/bin/sh
 
 printf "\n"
-echo "\e[1;31m[Docker]\e[0m"
+echo $"\e[1;31m[Docker]\e[0m"
 
 
 # Init Docker swarm
 docker swarm init
 
 # Add Docker networks
-docker network create public
+docker network create --driver=overlay traefik-public
 docker network create internal

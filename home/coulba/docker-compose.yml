@@ -3,7 +3,7 @@ services:
   website:
     image: "ghcr.io/emilesabatier/coulba/website"
     networks:
-      - public
+      - traefik-public
     deploy:
       labels:
         - traefik.enable=true
@@ -12,5 +12,5 @@ services:
         - traefik.http.services.myservice.loadbalancer.server.port=8080
 
 networks:
-  public:
+  traefik-public:
     external: true
