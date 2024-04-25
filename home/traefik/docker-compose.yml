@@ -9,7 +9,7 @@ services:
       - --providers.docker.watch=true
       - --providers.docker.exposedbydefault=false
       - --providers.docker.swarmmode=true
-      - --providers.swarm.endpoint=tcp://127.0.0.1:2377
+      # - --providers.swarm.endpoint=tcp://127.0.0.1:2377
       - --providers.docker.network=traefik-public
       - --providers.file.directory=/etc/traefik
       - --providers.file.watch=true
@@ -24,6 +24,7 @@ services:
     ports:
       - "80:80"
       - "443:443"
+      - "8080:8080"
     volumes:
       - "./letsencrypt:/letsencrypt"
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
