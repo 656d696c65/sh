@@ -1,4 +1,4 @@
-Automatically setup a debian like VPS.
+Automatically setup a debian server.
 
 - [iptables](http://git.netfilter.org/iptables/)
 - [fail2ban](https://github.com/fail2ban/fail2ban)

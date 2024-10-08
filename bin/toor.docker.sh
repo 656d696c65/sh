@@ -5,8 +5,8 @@ echo $"\e[1;31m[Docker]\e[0m"
 
 
 # Init Docker swarm
-docker swarm init
+# docker swarm init
 
 # Add Docker networks
-docker network create --driver=overlay traefik-public
+docker network create traefik-public
 docker network create internal

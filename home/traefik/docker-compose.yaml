@@ -1,0 +1,52 @@
+services:
+
+  traefik:
+    image: "traefik:v3"
+    container_name: "traefik"
+    command:
+      - --api.insecure=false
+      - --api.dashboard=true
+      - --providers.docker.watch=true
+      - --providers.docker.exposedbydefault=false
+      - --providers.docker.swarmmode=true
+      # - --providers.swarm.endpoint=tcp://127.0.0.1:2377
+      - --providers.docker.network=traefik-public
+      - --providers.file.directory=/etc/traefik
+      - --providers.file.watch=true
+      - --entrypoints.web.address=:80
+      - --entrypoints.web.http.redirections.entryPoint.to=websecure
+      - --entrypoints.web.http.redirections.entryPoint.scheme=https
+      # - --entrypoints.web.http.redirections.entryPoint.permanent=true
+      - --entrypoints.websecure.address=:443
+      - --certificatesresolvers.myresolver.acme.tlschallenge=true
+      - --certificatesresolvers.myresolver.acme.email=dev@emilesabatier.com
+      - --certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json
+    labels:
+      - traefik.http.routers.dashboard.rule=Host(`traefik.evidensy.com`)
+      - traefik.http.routers.dashboard.service=api@internal
+      - traefik.http.routers.dashboard.middlewares=auth
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8080:8080"
+    volumes:
+      - "./letsencrypt:/letsencrypt"
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+      - ".:/etc/traefik"
+    restart: always
+    networks:
+      - traefik-public
+  # whoami:
+  #   image: "traefik/whoami"
+  #   container_name: "whoami"
+  #   networks:
+  #     - traefik-public
+  #   labels:
+  #     - traefik.enable=true
+  #     - traefik.http.routers.whoami.rule=Host(`whoami.coulba.fr`)
+  #     - traefik.http.routers.whoami.entrypoints=websecure
+  #     - traefik.http.routers.whoami.tls.certresolver=myresolver
+
+networks:
+  traefik-public:
+    external: true
