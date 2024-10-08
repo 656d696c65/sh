@@ -1,6 +1,6 @@
 services:
 
-  website:
+  application:
     image: "registry/application"
     container_name: application
     networks:

@@ -18,10 +18,10 @@ services:
       - no-new-privileges:true
     labels:
       traefik.enable: true
-      traefik.http.routers.traefik.rule: Host(`traefik.evidensy.com`)
+      traefik.http.routers.traefik.rule: Host(`traefik.domain.com`)
       traefik.http.routers.traefik.service: api@internal
       traefik.http.routers.traefik.middlewares: auth
-      traefik.http.middlewares.auth.basicauth.users: admin:$2y$10$D3I12TGPnfOg/MQ8qQHaSeRysHpr6RFm.LUAI8D/d20cniOe9Qama
+      traefik.http.middlewares.auth.basicauth.users: admin:passwordhash
 
   whoami:
     image: traefik/whoami
@@ -30,7 +30,7 @@ services:
       - proxy
     labels:
       traefik.enable: true
-      traefik.http.routers.whoami.rule: Host(`whoami.evidensy.com`)
+      traefik.http.routers.whoami.rule: Host(`whoami.domain.com`)
       traefik.http.routers.blog.tls: true
       traefik.http.routers.blog.tls.certresolver: letsencrypt
 
