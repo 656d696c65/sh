@@ -18,7 +18,7 @@ echo \
 apt update
 
 # Install the Docker packages
-apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin compose-plugin
 
 # Add Docker rights
 groupadd docker
