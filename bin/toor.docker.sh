@@ -8,5 +8,5 @@ echo $"\e[1;31m[Docker]\e[0m"
 # docker swarm init
 
 # Add Docker networks
-docker network create traefik-public
+docker network create proxy
 docker network create internal
