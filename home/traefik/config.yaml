@@ -9,7 +9,7 @@ providers:
     exposedByDefault: false
 
 log:
-  level: INFO
+  level: DEBUG
   filePath: /var/log/traefik/info.log
 accessLog:
   filePath: /var/log/traefik/access.log
@@ -27,10 +27,10 @@ entryPoints:
     asDefault: true
     http:
       tls:
-        certresolver: myresolver
+        certresolver: letsencrypt
 
 certificatesResolvers:
-  myresolver:
+  letsencrypt:
     acme:
       email: dev@emilesabatier.com
       storage: /letsencrypt/acme.json

@@ -1,0 +1,16 @@
+services:
+
+  website:
+    image: "registry/application"
+    container_name: application
+    networks:
+      - proxy
+    labels:
+      traefik.enable: true
+      traefik.http.routers.whoami.rule: Host(`sub.domain.com`)
+      traefik.http.routers.blog.tls: true
+      traefik.http.routers.blog.tls.certresolver: letsencrypt
+
+networks:
+  proxy:
+    external: true
