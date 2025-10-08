@@ -10,7 +10,6 @@ sudo apt upgrade
 sudo adduser toor
 sudo apt -y install sudo
 sudo usermod -aG root,sudo,adm toor
-sudo su - toor
 
 
 # Install git and clone repo
@@ -63,3 +62,6 @@ sudo su -l toor -c `sh /home/toor/.sh/bin/toor.setup.sh`
 
 # # Remove repo
 # rm -r /home/toor/.sh
+
+sudo su - toor
+
