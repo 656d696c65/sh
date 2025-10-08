@@ -59,10 +59,10 @@ sudo usermod -aG docker toor
 
 
 # Execute as toor user
+sudo su - toor
 sudo su -l toor -c `sh /home/toor/.sh/bin/toor.setup.sh`
 
 # # Remove repo
 # rm -r /home/toor/.sh
 
-sudo su - toor
 
